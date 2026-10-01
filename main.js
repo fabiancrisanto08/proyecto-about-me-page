@@ -33,6 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
         stagger: 0.2,
         ease: "power2.out",
         delay: 0.8
+        
     });
 
     // 3. VALIDACIÓN DEL FORMULARIO DE REGISTRO
