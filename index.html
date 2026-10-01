@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Fabián Crisanto</title>
+    
+    <!-- CSS y Fuentes -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Oswald:wght@200..700&family=Syne+Tactile&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://fav.farm/⚽">
+
+    <!-- Librería GSAP y Script principal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <div class="grid-container">
+
+        <!-- 1. MENÚ SUPERIOR (1 clase) -->
+        <header class="bloque-menu">
+            <h2>MENÚ PRINCIPAL</h2>
+        </header>
+
+        <!-- 2. CONTENIDO PRINCIPAL (1 clase, 1 id) -->
+        <main class="bloque-contenido" id="contenido">
+            <h1 id="saludo-dinamico">¡Bienvenido a mi web!</h1>
+            <h2>CONTENIDO PRINCIPAL</h2>
+            <p>Soy Fabián Crisanto, me gusta mucho la tecnología y soy una persona amigable, responsable y con mucha actitud. Juego en la juvenil de Ciudad de Getafe y me encantan las computadoras.</p>
+            
+            <h3>Tres cosas que me gustan:</h3>
+            <ul class="listacosasquemegustan">
+                <li>⚽ Jugar Fútbol</li>
+                <li>🎮 Videojuegos</li>
+                <li>🖥️ Reparar PC</li>
+            </ul>
+        </main>
+
+        <!-- 3. FOTO Y CONTACTO (1 clase, 1 id) -->
+        <aside class="bloque-foto" id="contacto">
+            <h2>FOTO Y CONTACTO</h2>
+            <div class="cuadro-foto">
+                <img src="img/perropixel.webp" alt="Perrito de Fabián">
+            </div>
+            <ul class="lista-contacto">
+                <li>📞 <a href="tel:+34619757217">+34 619 75 72 17</a></li>
+                <li>✉️ <a href="mailto:fabianadrianocrisantoalva@gmail.com">fabianadrianocrisantoalva@gmail.com</a></li>
+            </ul>
+
+            <a href="#formulario" class="btn-contactame">¡CONTÁCTAME YA! 🚀</a>
+        </aside>
+
+        <!-- 4. EDUCACIÓN (1 clase, 1 id) -->
+        <section class="bloque-educacion" id="educacion">
+            <h2>EDUCACIÓN Y METAS</h2>
+            <p>Estoy aquí porque me apasiona la tecnología y la programación. Mi meta es convertirme en un profesional de alto nivel y trabajar o colaborar en grandes empresas como Microsoft.</p>
+        </section>
+
+        <!-- 5. IDIOMAS Y HABILIDADES (1 clase) -->
+        <section class="bloque-idiomas">
+            <h2>IDIOMAS Y FORTALEZAS</h2>
+            <ul class="lista-idiomas">
+                <li>Español (Nativo)</li>
+                <li>Entrenamiento deportivo y disciplina</li>
+                <li>Pasión por la superación diaria</li>
+            </ul>
+        </section>
+
+        <!-- 6. SECCIÓN FORMULARIO (1 clase, 1 id) -->
+        <section class="bloque-formulario" id="formulario">
+            <h2>REGÍSTRATE / CONTACTO DIRECTO</h2>
+            <p>Rellena tus datos para ponernos en contacto:</p>
+
+            <form id="form-registro" novalidate>
+                <div class="campo">
+                    <label for="nombre">Nombres y Apellidos:</label>
+                    <input type="text" id="nombre" placeholder="Ej: Juan Pérez Gómez">
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo Gmail (@gmail.com):</label>
+                    <input type="email" id="email" placeholder="ejemplo@gmail.com">
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono (España - 9 dígitos):</label>
+                    <input type="tel" id="telefono" placeholder="Ej: 612345678">
+                </div>
+
+                <button type="submit" class="btn-enviar">ENVIAR REGISTRO</button>
+            </form>
+
+            <p id="mensaje-estado"></p>
+        </section>
+
+        <!-- 7. FOOTER (1 clase) -->
+        <footer class="bloque-footer">
+            <div class="redes-sociales">
+                <strong>REDES SOCIALES:</strong>
+                <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            <p>© 2026 - Diseñado por Fabián Crisanto</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>4
