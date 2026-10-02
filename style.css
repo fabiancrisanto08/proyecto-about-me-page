@@ -61,7 +61,10 @@ h1, h2, h3 {
 
 .bloque-contenido {
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .listacosasquemegustan {
     list-style: none;
