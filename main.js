@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
         delay: 0.5
     });
 
-    // 3. VALIDACIÓN DEL FORMULARIO DE REGISTRO
+    // 3. VALIDACIÓN DEL FORMULARIO DE REGISTRO! 
     const formulario = document.getElementById("form-registro");
     const mensajeEstado = document.getElementById("mensaje-estado");
 
