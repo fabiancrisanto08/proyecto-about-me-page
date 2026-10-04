@@ -20,94 +20,96 @@
 
     <div class="grid-container">
 
-        <!-- 1. MENÚ SUPERIOR (1 clase) -->
+        <!-- 1. HEADER (Solo 1 h1 en toda la página) -->
         <header class="bloque-menu">
-            <h2>MENÚ PRINCIPAL</h2>
+            <h1 id="saludo-dinamico">¡Bienvenido a mi web!</h1>
+            <nav class="menu-navegacion">
+                <a href="#origenes">Orígenes</a>
+                <a href="#hobbies">Tiempo Libre</a>
+                <a href="#estudios">Estudios</a>
+                <a href="#historia">Mi Historia</a>
+                <a href="#metas">Metas</a>
+            </nav>
         </header>
 
-        <!-- 2. CONTENIDO PRINCIPAL (1 clase, 1 id) -->
+        <!-- 2. MAIN (Contiene las 5 secciones requeridas) -->
         <main class="bloque-contenido" id="contenido">
-            <h1 id="saludo-dinamico">¡Bienvenido a mi web!</h1>
-            <h2>CONTENIDO PRINCIPAL</h2>
-            <p>Soy Fabián Crisanto, me gusta mucho la tecnología y soy una persona amigable, responsable y con mucha actitud. Juego en la juvenil de Ciudad de Getafe y me encantan las computadoras.</p>
             
-            <h3>Tres cosas que me gustan:</h3>
-            <ul class="listacosasquemegustan">
-                <li>⚽ Jugar Fútbol</li>
-                <li>🎮 Videojuegos</li>
-                <li>🖥️ Reparar PC</li>
-            </ul>
-                   
+            <section id="origenes" class="seccion-info">
+                <div class="texto-seccion">
+                    <h2>Dónde nací y he vivido</h2>
+                    <p>Nací en Perú, Lima, un lugar que me ha enseñado el valor del esfuerzo diario. Desde muy pequeño, me he movido por sus calles y he disfrutado de la cercanía con la gran ciudad sin perder la esencia de mi barrio. Vivir aquí me ha permitido conocer a personas increíbles y forjar grandes amistades. Siempre he sido una persona muy amigable y responsable, valores que he aprendido en mi entorno. El ritmo de esta ciudad me ha preparado para ser dinámico y adaptarme a cualquier situación.</p>
+                </div>
+                <img src="img\callesperu.jpg" alt="calles de peru">
+            </section>
+
+            <section id="hobbies" class="seccion-info">
+                <div class="texto-seccion">
+                    <h2>Qué hago en mi tiempo libre</h2>
+                    <p>El fútbol es mi gran pasión y juego en la juvenil de Ciudad de Getafe. Entrenar me da disciplina y me permite soltar toda la adrenalina acumulada durante la semana. Cuando no estoy en el terreno de juego, me sumerjo por completo en el mundo de los videojuegos. Además, me encanta desarmar y reparar ordenadores para entender cómo funcionan por dentro. Combinar el deporte físico intenso con la precisión de la tecnología es lo que me mantiene siempre activo y motivado.</p>
+                </div>
+                <img src="img\futbolistaperuano.jpg" alt="imghobbies">
+            </section>
+
+            <section id="estudios" class="seccion-info">
+                <div class="texto-seccion">
+                    <h2>Qué he estudiado</h2>
+                    <p>Mi camino académico siempre ha estado guiado por mi curiosidad infinita hacia cómo funcionan las cosas. Empecé con estudios básicos donde descubrí que la lógica y la resolución de problemas se me daban genial. Ahora he dado el salto a este bootcamp de programación web para aprender desde cero y de forma profesional. Me estoy formando intensamente en HTML, CSS y pronto dominaré JavaScript y otras tecnologías. Cada día es un reto nuevo, pero mi mentalidad deportiva me ayuda a no rendirme nunca ante un error de código.</p>
+                </div>
+                <img src="img\laptopcodigo.jpg" alt="una laptop con codigo">
+            </section>
+
+            <section id="historia" class="seccion-info">
+                <div class="texto-seccion">
+                    <h2>Mi historia hasta aquí</h2>
+                    <p>Mi historia con la tecnología empezó casi por casualidad cuando un ordenador viejo se estropeó en casa. En lugar de darlo por perdido, decidí abrirlo, investigar en foros y conseguir que volviera a encender. Esa pequeña victoria me hizo darme cuenta de que quería crear cosas con la tecnología, no solo ser un usuario más. Desde ese momento, me convertí en el técnico oficial de mi familia y amigos para arreglar cualquier aparato. Llegar a este bootcamp es el resultado lógico de años de curiosidad y ganas de profesionalizar mi talento natural.</p>
+                </div>
+                <img src="img\torrepc.jpg" alt="Ilustración plana de un chico arreglando una torre de ordenador abierta">
+            </section>
+
+            <section id="metas" class="seccion-info">
+                <div class="texto-seccion">
+                    <h2>Mis metas y el futuro</h2>
+                    <p>Mirando hacia el futuro, tengo muy claro que quiero llegar a lo más alto en el mundo del desarrollo de software. Mi sueño y meta principal es convertirme en un profesional tecnológico de altísimo nivel. Me visualizo trabajando como desarrollador o colaborando en proyectos para gigantes de la industria como Microsoft. Sé perfectamente que para lograrlo necesito la misma constancia y trabajo en equipo que aplico en los partidos de fútbol. Con esfuerzo, código limpio y buena actitud, estoy seguro de que alcanzaré todas mis metas.</p>
+                </div>
+                <img src="img\oficinas.jpg" alt="Ilustración futurista de unas oficinas tecnológicas modernas">
+            </section>
+
         </main>
 
-        <!-- 3. FOTO Y CONTACTO (1 clase, 1 id) -->
-        <aside class="bloque-foto" id="contacto">
-            <h2>FOTO Y CONTACTO</h2>
-            <div class="cuadro-foto">
-                <img src=img\fabian-pixel.jpg alt="Foto de Fabián Crisanto" class="foto-principal">
+        <!-- 3. BARRA LATERAL (Formulario y contacto) -->
+        <aside class="bloque-formulario">
+            <div class="cuadro-foto" style="text-align: center; margin-bottom: 20px;">
+                <img src="img/fabian-pixel.jpg" alt="Avatar de Fabián Crisanto en Pixel Art" style="width: 150px; border-radius: 12px; border: 3px solid #ff6600;">
             </div>
-            <ul class="lista-contacto">
-                <li>📞 <a href="tel:+34619757217">+34 619 75 72 17</a></li>
-                <li>✉️ <a href="mailto:fabianadrianocrisantoalva@gmail.com">fabianadrianocrisantoalva@gmail.com</a></li>
-            </ul>
-
-            <a href="#formulario" class="btn-contactame">¡CONTÁCTAME YA! 🚀</a>
-        </aside>
-
-        <!-- 4. EDUCACIÓN (1 clase, 1 id) -->
-        <section class="bloque-educacion" id="educacion">
-            <h2>EDUCACIÓN Y METAS</h2>
-            <p>Estoy aquí porque me apasiona la tecnología y la programación. Mi meta es convertirme en un profesional de alto nivel y trabajar o colaborar en grandes empresas como Microsoft.</p>
-        </section>
-
-        <!-- 5. IDIOMAS Y HABILIDADES (1 clase) -->
-        <section class="bloque-idiomas">
-            <h2>IDIOMAS Y FORTALEZAS</h2>
-            <ul class="lista-idiomas">
-                <li>Español (Nativo)</li>
-                <li>Entrenamiento deportivo y disciplina</li>
-                <li>Pasión por la superación diaria</li>
-            </ul>
-        </section>
-
-        <!-- 6. SECCIÓN FORMULARIO (1 clase, 1 id) -->
-        <section class="bloque-formulario" id="formulario">
-            <h2>REGÍSTRATE / CONTACTO DIRECTO</h2>
-            <p>Rellena tus datos para ponernos en contacto:</p>
-
+            
+            <h2>CONTACTO DIRECTO</h2>
             <form id="form-registro" novalidate>
                 <div class="campo">
                     <label for="nombre">Nombres y Apellidos:</label>
-                    <input type="text" id="nombre" placeholder="Ej: Juan Pérez Gómez">
+                    <input type="text" id="nombre" placeholder="Ej: Juan Pérez">
                 </div>
-
                 <div class="campo">
-                    <label for="email">Correo Gmail (@gmail.com):</label>
+                    <label for="email">Correo Gmail:</label>
                     <input type="email" id="email" placeholder="ejemplo@gmail.com">
                 </div>
-
                 <div class="campo">
-                    <label for="telefono">Teléfono (España - 9 dígitos):</label>
+                    <label for="telefono">Teléfono (España):</label>
                     <input type="tel" id="telefono" placeholder="Ej: 612345678">
                 </div>
-
-                <button type="submit" class="btn-enviar">ENVIAR REGISTRO</button>
+                <button type="submit" class="btn-enviar">ENVIAR REGISTRO 🚀</button>
             </form>
-
             <p id="mensaje-estado"></p>
-        </section>
+        </aside>
 
-        <!-- 7. FOOTER (1 clase) -->
+        <!-- 4. FOOTER -->
         <footer class="bloque-footer">
             <div class="redes-sociales">
-                <strong>REDES SOCIALES:</strong>
-                <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="https://x.com" target="_blank" rel="noopener noreferrer">Twitter / X</a>
-                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <strong>REDES:</strong>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://github.com/fabiancrisanto08" target="_blank">GitHub</a>
+                <a href="https://www.instagram.com/crisantofabian08/" target="_blank">Instagram</a>
+                <a href="https://github.com/fabiancrisanto08/proyecto-about-me-page" target="_blank">Repositorio de esta pagina</a>
             </div>
             <p>© 2026 - Diseñado por Fabián Crisanto</p>
         </footer>
@@ -115,4 +117,4 @@
     </div>
 
 </body>
-</html>4
+</html>

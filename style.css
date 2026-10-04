@@ -1,7 +1,6 @@
 /* =================================================== */
 /* 1. RESET Y CONFIGURACIÓN GENERAL                    */
 /* =================================================== */
-
 * {
     box-sizing: border-box;
 }
@@ -14,34 +13,6 @@ body {
     padding: 20px;
 }
 
-/* =================================================== */
-/* 2. LAYOUT Y ESTILO COMÚN DE LAS TARJETAS           */
-/* =================================================== */
-
-.grid-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.8fr 1fr;
-    gap: 15px;
-}
-
-/* Agrupamos todas las tarjetas para que tengan el mismo fondo */
-.bloque-menu,
-.bloque-contenido,
-.bloque-foto,
-.bloque-educacion,
-.bloque-idiomas,
-.bloque-formulario,
-.bloque-footer {
-    background-color: #f4f6f8;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    color: #000000;
-}
-
-/* Encabezados generales */
 h1, h2, h3 {
     font-family: 'Bungee', cursive;
     color: #000000;
@@ -50,129 +21,101 @@ h1, h2, h3 {
 }
 
 /* =================================================== */
-/* 3. BLOQUES ESPECÍFICOS Y COMPONENTES                */
+/* 2. LAYOUT GRID PRINCIPAL                            */
 /* =================================================== */
+.grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 partes para el main, 1 parte para el aside */
+    gap: 20px;
+}
 
+/* Estilo común de las tarjetas */
+.bloque-menu,
+.bloque-contenido,
+.bloque-formulario,
+.bloque-footer {
+    background-color: #f4f6f8;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* =================================================== */
+/* 3. BLOQUES ESPECÍFICOS                              */
+/* =================================================== */
 .bloque-menu {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
     background: linear-gradient(to right, #ff6600, #ffffff);
     text-align: center;
 }
 
-.bloque-contenido {
-    background-color: #ffffff;
+.menu-navegacion {
     display: flex;
-    flex-direction: column;
-}
-
-
-.listacosasquemegustan {
-    list-style: none;
-    padding-left: 0;
-}
-
-.listacosasquemegustan li {
-    background-color: #ff6600;
-    color: #000000;
-    font-weight: bold;
-    margin: 8px 0;
-    padding: 8px 12px;
-    border-radius: 5px;
-}
-
-.lista-contacto, 
-.lista-idiomas {
-    list-style: none;
-    padding-left: 0;
-}
-
-.lista-contacto li, 
-.lista-idiomas li {
-    margin: 8px 0;
-}
-
-.lista-contacto a {
-    color: #000000;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.bloque-foto {
-    text-align: center;
-}
-
-.cuadro-foto img {
-    width: 100%;
-    max-width: 220px;
-    border-radius: 12px;
-    border: 3px solid #ff6600;
-}
-
-.bloque-footer {
-    grid-column: 1 / -1;
-    background-color: #e2e8f0;
-    text-align: center;
-}
-
-.redes-sociales {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
-.redes-sociales a {
-    color: #000000;
-    text-decoration: none;
+.menu-navegacion a {
+    color: #000;
     font-weight: bold;
-    background-color: #ff6600;
-    padding: 6px 12px;
-    border-radius: 5px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 15px;
+    border-radius: 20px;
     transition: all 0.3s ease;
 }
 
-.redes-sociales a:hover {
-    background-color: #ffffff;
+.menu-navegacion a:hover {
+    background-color: #000;
     color: #ff6600;
-    transform: translateY(-2px);
 }
 
 /* =================================================== */
-/* 4. ADAPTACIÓN A MÓVIL                              */
+/* 4. SECCIONES Y EFECTO ZIG-ZAG (RETO EXTRA)          */
 /* =================================================== */
-
-@media screen and (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
+.seccion-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    border-bottom: 2px dashed #cccccc;
+    padding-bottom: 20px;
 }
 
-/* =================================================== */
-/* 5. BOTÓN DE CONTACTO Y FORMULARIO                  */
-/* =================================================== */
+/* Le quitamos la línea de puntos a la última sección */
+.seccion-info:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 
-.btn-contactame {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    background-color: #ff6600;
-    color: #ffffff !important;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 1.1rem;
+.seccion-info img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid #ff6600;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
 }
 
-.btn-contactame:hover {
-    background-color: #000000;
-    transform: scale(1.05);
+.texto-seccion p {
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
+/* LA MAGIA: Las secciones pares invierten el orden (imagen a la izq) */
+.seccion-info:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* =================================================== */
+/* 5. FORMULARIO Y FOOTER                              */
+/* =================================================== */
 .bloque-formulario {
-    grid-column: 1 / -1;
     background-color: #ffffff;
 }
 
@@ -210,25 +153,53 @@ h1, h2, h3 {
     cursor: pointer;
     width: 100%;
     transition: background 0.3s ease;
+    margin-top: 10px;
 }
 
 .btn-enviar:hover {
     background-color: #000000;
 }
 
-/* Clases únicas para estados de error o éxito */
-.mensaje-error {
-    margin-top: 15px;
-    font-weight: bold;
-    font-size: 1.1rem;
+.mensaje-error { color: #d9534f; font-weight: bold; margin-top: 10px; text-align: center;}
+.mensaje-exito { color: #5cb85c; font-weight: bold; margin-top: 10px; text-align: center;}
+
+.bloque-footer {
+    grid-column: 1 / -1;
     text-align: center;
-    color: #d9534f;
 }
 
-.mensaje-exito {
-    margin-top: 15px;
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.redes-sociales a {
+    color: #000000;
+    text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
-    text-align: center;
-    color: #5cb85c;
+    background-color: #ff6600;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    background-color: #000000;
+    color: #ff6600;
+}
+
+/* =================================================== */
+/* 6. RESPONSIVE (MÓVILES)                             */
+/* =================================================== */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Todo en 1 columna en móvil */
+    }
+    .seccion-info, .seccion-info:nth-child(even) {
+        flex-direction: column; /* Imagen arriba, texto abajo en móvil */
+        text-align: center;
+    }
 }
